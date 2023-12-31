@@ -84,4 +84,7 @@ To clarify why I made this selection:
 
 To finalize my data modeling, I merged three tables to create a comprehensive dataset. Initially, I used the reaction table as the primary table, linking relevant columns from the content dataset and subsequently from the reaction types dataset using the 'VLOOKUP' formula. Then, employing the "SUMIF" formula, I calculated the total scores for each category. This process led to a refined dataset highlighting the top 5 categories based on the accumulated scores.
 
+![](Capture2)
+
+
 
