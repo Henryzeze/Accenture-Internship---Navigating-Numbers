@@ -86,5 +86,12 @@ To finalize my data modeling, I merged three tables to create a comprehensive da
 
 ![](Capture2)
 
+## Data Visualization & Storytelling
 
+I'm aware that the client is eager to uncover the top 5 content categories. Apart from that, I aim to provide the client with additional insightful information like:
 
+- How many unique categories are there?
+- How many reactions are there to the most popular category?
+- What was the month with the most posts?
+
+My choice for Visualization was Microsoft Power BI.
