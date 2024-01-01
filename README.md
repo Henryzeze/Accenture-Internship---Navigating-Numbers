@@ -1,5 +1,7 @@
 # Accenture-Internship---Navigating-Numbers
 
+![]()
+
 ## Overview
 
 This project revolves around working as a data analyst in the capacity of a technology delivery analyst at Accenture. As a data analyst, my primary focus was to swiftly grasp the project's essence to provide context to the client's overall objective. The main tasks involve:
@@ -86,7 +88,7 @@ To finalize my data modeling, I merged three tables to create a comprehensive da
 
 ![](Capture2)
 
-## Data Visualization & Storytelling
+## Data Analysis / Data Visualization & Storytelling
 
 I'm aware that the client is eager to uncover the top 5 content categories. Apart from that, I aim to provide the client with additional insightful information like:
 
@@ -95,3 +97,29 @@ I'm aware that the client is eager to uncover the top 5 content categories. Apar
 - What was the month with the most posts?
 
 My choice for Visualization was Microsoft Power BI.
+
+- After importing the data into Power Bi, I created a Summary table using DAX function ***Summary_Table = SUMMARIZE('Dataset', 'Dataset'[Category], 'Dataset'[Month], 'Dataset'[Sentiment], 'Dataset'[Reaction Type], "Post Count", COUNT('Dataset'[Content ID]), "Total Score", SUM('Dataset'[Score]) )*** as this will further help narrow down my analysis.
+- I created a new calculated column for months using DAX formula ***MonthName = FORMAT('Summary_table'[Datetime], "MMMM")*** to extract out the month from the Datetime column.
+- I created a new calculated measure using DAX formula ***HighestPostCountMonth = VAR MaxPostCount = MAXX(SUMMARIZE('Summary_table', 'Summary_table'[MonthName], "TotalPosts", SUM('Summary_table'[Post count])), [TotalPosts])RETURNCALCULATE(MAX('Summary_table'[MonthName]), FILTER(SUMMARIZE('Summary_table', 'Summary_table'[MonthName], "TotalPosts", SUM('Summary_table'[Post count])), [TotalPosts] = MaxPostCount))*** to retreive the highest post per month.
+- Sorting and Top N analysis filters were used during the visualization to narrow down my analysis to the top 5 popular categories.
+
+![](BIvisuals.JPG)
+
+## Insights
+
+1. Between 2020 and 2021, Social Buzz made 25,000 posts, with the highest number of posts(cumulatively) occurring in May. August 2020 had the highest number of posts between 2020 and 2021.
+2. Among Social Buzz's 16 unique content categories, the overall top 5 popular categories are animals, science, healthy eating, technology, and food, in that order.
+3. The animal category stands as the most popular, amassing 1,897 reactions, with the highest post count observed in January 2021.
+
+## Recommendation
+
+Food is a common theme with the top 5 categories with "Healthy Eating" ranking the highest. This may indicate the audience within your user base. You could use this insight to create a campaign and work with healthy eating brands to boost user engagement.
+
+## Certificate of Completion
+
+![]()
+
+
+
+
+
