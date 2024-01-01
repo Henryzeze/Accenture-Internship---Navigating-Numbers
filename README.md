@@ -1,6 +1,6 @@
 # Accenture-Internship---Navigating-Numbers
 
-![]()
+![](cover.png)
 
 
 ## Overview
